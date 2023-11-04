@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,14 @@ Route::get('/home', function () {
 });
 
 Route::get('/branch', function () {
+
+    $branches = DB::table('shop_branches')->get();
+
     return view('shop_branches', 
     [
         "pagetitle" => "Branches",
         "maintitle" => "",
+        "branches"=> $branches
     ]);
 });
 

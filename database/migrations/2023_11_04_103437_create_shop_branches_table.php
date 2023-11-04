@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('shop_branches', function (Blueprint $table) {
-            $table->id();
+            $table->id('branch_id');
+            $table->string('branch_location');
+            $table->string('branch_email');
+            $table->string('branch_phone_number');
+            $table->integer('workers_count')->nullable();
+            $table->integer('products_count')->nullable();
             $table->timestamps();
         });
     }

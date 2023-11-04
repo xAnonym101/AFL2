@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\shop_branches>
  */
-class ShopBranchesFactory extends Factory
+class shop_branchesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,11 @@ class ShopBranchesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'branch_location' => fake()->name(),
+            'branch_email' => fake()->unique()->safeEmail(),
+            'branch_phone_number'=> fake()->phoneNumber(),
+            'workers_count'=> 0,
+            'products_count'=> 0,
         ];
     }
 }
