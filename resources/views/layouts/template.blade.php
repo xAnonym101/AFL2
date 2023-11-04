@@ -40,5 +40,9 @@
     @yield('layout_content')
 </div>
     
+<div class="container">
+  @yield('branch_table')
+</div>
+
 </body>
 </html>

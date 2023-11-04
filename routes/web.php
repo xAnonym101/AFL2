@@ -21,6 +21,14 @@ Route::get('/home', function () {
     ]);
 });
 
+Route::get('/branch', function () {
+    return view('shop_branches', 
+    [
+        "pagetitle" => "Branches",
+        "maintitle" => "",
+    ]);
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
