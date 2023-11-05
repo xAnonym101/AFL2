@@ -23,7 +23,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/branch', function () {
-    $branches = DB::table('shopbranches')->get();
+    $branches = DB::table('branches')->get();
     return view('branch', 
     [
         "pagetitle" => "branches",

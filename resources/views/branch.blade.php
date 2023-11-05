@@ -15,12 +15,12 @@
     <tbody>
       @foreach ($branches as $x)
           <tr>
-            <td>{{$branches->id}}</td>
-            <td>{{$branches->branch_location}}</td>
-            <td>{{$branches->branch_email}}</td>
-            <td>{{$branches->branch_pnumber}}</td>
-            <td>{{$branches->workers_count}}</td>
-            <td>{{$branches->products_count}}</td>
+            <td>{{$x->id}}</td>
+            <td>{{$x->branch_location}}</td>
+            <td>{{$x->branch_email}}</td>
+            <td>{{$x->branch_pnumber}}</td>
+            <td>{{$x->workers_count}}</td>
+            <td>{{$x->products_count}}</td>
           </tr>
       @endforeach
     </tbody>

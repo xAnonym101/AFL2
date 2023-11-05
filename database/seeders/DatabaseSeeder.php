@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 
 use App\Models\branches;
+use App\Models\workers;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,6 +24,17 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        branches::factory()->count(3)->create();
+        branches::factory()
+            ->count(3)
+            ->has(workers::factory()->count(5))
+            ->create();
+
+        $branches = branches::all();
+
+        foreach ($branches as $branch) {
+            $branch->update([
+                'workers_count' => $branch->workers->count(),
+            ]);
+        }
     }
 }
