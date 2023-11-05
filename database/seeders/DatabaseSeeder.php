@@ -4,8 +4,12 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+<<<<<<< Updated upstream
 use App\Models\shop_branches;
 use Database\Factories\ShopBranchesFactory;
+=======
+use App\Models\branches;
+>>>>>>> Stashed changes
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +26,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+<<<<<<< Updated upstream
         shop_branches::factory(5)->create();
+=======
+        branches::factory()->count(3)->create();
+>>>>>>> Stashed changes
     }
 }

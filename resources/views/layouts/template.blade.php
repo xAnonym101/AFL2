@@ -35,7 +35,7 @@
 </nav>
 
 <div class="container">
-    <h1>{{$maintitle}}</h1>
+    <h1 class="text-center">{{$maintitle}}</h1>
     <h2>@yield('layout_tagline')</h2>
     @yield('layout_content')
 </div>

@@ -24,12 +24,21 @@ Route::get('/home', function () {
 
 Route::get('/branch', function () {
 
+<<<<<<< Updated upstream
     $branches = DB::table('shop_branches')->get();
 
     return view('shop_branches', 
     [
         "pagetitle" => "Branches",
         "maintitle" => "",
+=======
+    $branches = DB::table('shopbranches')->get();
+
+    return view('branch', 
+    [
+        "pagetitle" => "branches",
+        "maintitle" => "Branches :",
+>>>>>>> Stashed changes
         "branches"=> $branches
     ]);
 });
