@@ -20,8 +20,6 @@ class BranchesFactory extends Factory
             'branch_location' => fake()->name(),
             'branch_email' => fake()->unique()->safeEmail(),
             'branch_pnumber' => fake()->phoneNumber(),
-            "workers_count" => 0,
-            "products_count" => 0,
         ];
     }
 }
