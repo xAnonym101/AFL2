@@ -32,6 +32,16 @@ Route::get('/branch', function () {
     ]);
 });
 
+Route::get('/workers', function () {
+    $workers = DB::table('workers')->get();
+    return view('workers', 
+    [
+        "pagetitle" => "workers",
+        "maintitle" => "Workers :",
+        "workers"=> $workers
+    ]);
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
