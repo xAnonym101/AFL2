@@ -16,19 +16,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link {{$Home ?? ''}}" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/tentangkita">About us</a>
+          <a class="nav-link {{$about ?? ''}}" href="/aboutus">About us</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/kontakkita">contact us</a>
+            <a class="nav-link {{$contact ?? ''}}" href="/contactus">contact us</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/kontakkita">Pegawai</a>
+            <a class="nav-link {{$employee ?? ''}}" href="/employee">employee</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/kontakkita">Produk</a>
+            <a class="nav-link {{$product ?? ''}}" href="/product">product</a>
         </li>
     </div>
   </div>
@@ -39,6 +39,6 @@
     <h2>@yield('layout_tagline')</h2>
     @yield('layout_content')
 </div>
-    
+
 </body>
 </html>
