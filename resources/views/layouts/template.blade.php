@@ -48,6 +48,7 @@
         <h1>{{ $maintitle }}</h1>
         <h2>@yield('layout_tagline')</h2>
         @yield('layout_content')
+        @yield('gbr')
     </div>
 
 </body>
