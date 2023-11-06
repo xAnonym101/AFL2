@@ -12,14 +12,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/home', function () {
-    return view('home', 
+Route::get('/', function () {
+    return view('home',
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
     ]);
 });
+
+// Route::get('/home', function () {
+//     return view('home',
+//     [
+//         "pagetitle" => "home",
+//         "maintitle" => "Virgo Furnishers",
+//     ]);
+// });
 
 Route::middleware([
     'auth:sanctum',
