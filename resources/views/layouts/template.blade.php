@@ -13,10 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-secondary"style="--bs-bg-opacity: .3;">
-    <nav class="navbar navbar-expand-lg bg-dark ">
+<body class=""style="background:rgba(45,37,26,1) ;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid float-right">
             <a class="text-white navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

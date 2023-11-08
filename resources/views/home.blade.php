@@ -1,4 +1,10 @@
 @extends('layouts.template')
 @section('gbr')
-<img src="https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Responsive image">
+{{-- <div class="container-fluid" style="background-image: radial-gradient(#f8f0e59a, #0F2C59)"> --}}
+<div class="container-fluid bg-img">
+    <h1 style="padding-top: 40px; text-align: center;font-size: 80px;color:rgb(255, 255, 255)">Virgo furnishers</h1>
+</div>
+{{-- </div> --}}
+
+
 @endsection
