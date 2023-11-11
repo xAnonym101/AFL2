@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
+            $table->string('branch_picture')->nullable();
             $table->string('branch_location');
             $table->string('branch_email');
             $table->string('branch_pnumber');

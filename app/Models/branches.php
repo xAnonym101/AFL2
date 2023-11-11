@@ -10,6 +10,7 @@ class branches extends Model
 {
     use HasFactory;
     protected $fillable = [
+        "branch_picture",
         "branch_location",
         "branch_email",
         "branch_pnumber",
