@@ -17,8 +17,7 @@ class WorkersFactory extends Factory
     public function definition(): array
     {
         return [
-            'first_name' => fake()->firstName(),
-            'last_name' => fake()->lastName(),
+            'full_name' => fake()->name(),
             'age'=> fake()->numberBetween(24, 45),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),

@@ -8,6 +8,7 @@ namespace Database\Seeders;
 use App\Models\branches;
 use App\Models\workers;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,17 +24,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        $this->call(BranchesSeeder::class);
+        $this->call(ProductsSeeder::class);
 
-        branches::factory()
-            ->count(3)
-            ->has(workers::factory()->count(5))
-            ->create();
+        $branchesCount = DB::table("branches")->count();
+        $productsCount = DB::table("products")->count();
 
-        $branches = branches::all();
-
-        foreach ($branches as $branch) {
-            $branch->update([
-                'workers_count' => $branch->workers->count(),
+        for ($i = 0; $i < 20; $i++) {
+            DB::table("branches_products")->insert([
+                "branches_id"=> rand(1, $branchesCount),
+                "products_id"=> rand(1, $productsCount),
             ]);
         }
     }

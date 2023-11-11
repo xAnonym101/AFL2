@@ -14,7 +14,6 @@ class branches extends Model
         "branch_email",
         "branch_pnumber",
         "workers_count",
-        "products_count",
     ];
 
     public function workers()
