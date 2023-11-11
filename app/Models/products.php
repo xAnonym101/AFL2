@@ -11,7 +11,11 @@ class products extends Model
     protected $fillable = [
         "branches_selling",
         "furniture_name",
+        "price",
         "stocks",
-        "color_available",
     ];
+    public function branches()
+    {
+        return $this->belongsToMany(branches::class, 'branches_products', 'products_id', 'branches_id');
+    }
 }

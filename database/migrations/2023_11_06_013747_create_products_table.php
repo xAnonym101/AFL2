@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('branches_selling');
             $table->string('furniture_name');
+            $table->string('price');
             $table->string('stocks');
-            $table->string('color_available');
             $table->timestamps();
         });
     }

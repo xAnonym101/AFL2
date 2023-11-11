@@ -22,6 +22,11 @@ class branches extends Model
         return $this->hasMany(workers::class);
     }
 
+    public function products()
+    {
+        return $this->belongsToMany(products::class, 'branches_products', 'branches_id', 'products_id');
+    }
+
     public function getWorkersCountAttribute()
     {
         return $this->workers->count();
