@@ -17,8 +17,42 @@ Route::get('/', function () {
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
+        "home" => "active",
     ]);
 });
+
+Route::get('/about_us', function () {
+    return view('about_us',
+    [
+        "pagetitle" => "home",
+        "maintitle" => "Virgo Furnishers",
+    ]);
+});
+
+Route::get('/contact_us', function () {
+    return view('contact_us',
+    [
+        "pagetitle" => "home",
+        "maintitle" => "Virgo Furnishers",
+    ]);
+});
+
+Route::get('/employee', function () {
+    return view('employee',
+    [
+        "pagetitle" => "home",
+        "maintitle" => "Virgo Furnishers",
+    ]);
+});
+
+Route::get('/product', function () {
+    return view('product',
+    [
+        "pagetitle" => "home",
+        "maintitle" => "Virgo Furnishers",
+    ]);
+});
+
 
 // Route::get('/home', function () {
 //     return view('home',

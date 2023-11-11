@@ -17,23 +17,23 @@
 </head>
 
 <body class=""style="background:rgba(45,37,26,1) ;">
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #96926b;">
         <div class="container-fluid float-right">
             <a class="text-white navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="text-white nav-link {{ $Home ?? '' }}" aria-current="page" href="/">Home</a>
+                        <a class="text-white nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link {{ $about ?? '' }}" href="/aboutus">About us</a>
+                        <a class="text-white nav-link {{ $about ?? '' }}" href="/about_us">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link {{ $contact ?? '' }}" href="/contactus">contact us</a>
+                        <a class="text-white nav-link {{ $contact ?? '' }}" href="/contact_us">contact us</a>
                     </li>
                     <li class="nav-item">
                         <a class="text-white nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
@@ -46,7 +46,6 @@
     </nav>
 
     <div class="container">
-        <h1>{{ $maintitle }}</h1>
         @yield('layout_content')
         @yield('gbr')
     </div>
