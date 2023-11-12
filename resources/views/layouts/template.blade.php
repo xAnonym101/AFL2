@@ -14,6 +14,44 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .scrollable-content {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .scrollable-content::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .responsive-card {
+            width: 19vw;
+            height: 60vh
+        }
+
+        @media (max-width:767px) {
+            .responsive-card {
+                width: 100%;
+                height: 10%
+            }
+        }
+    </style>
 </head>
 
 <body class=""style="background:rgba(45,37,26,1) ;">
@@ -24,7 +62,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" >
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="text-white nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
@@ -45,8 +83,9 @@
         </div>
     </nav>
 
-    <div class="container">
-        @yield('layout_content')
+    <div class="container-fluid">
+        @yield('layout_content1')
+        @yield('layout_content2')
         @yield('gbr')
     </div>
 
