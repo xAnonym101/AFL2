@@ -21,7 +21,7 @@ class WorkersFactory extends Factory
             'age'=> fake()->numberBetween(24, 45),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
-            'marital'=> fake()->boolean()
+            'marital' => fake()->randomElement(['Single', 'Married']),
         ];
     }
 }

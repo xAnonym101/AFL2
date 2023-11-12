@@ -3,6 +3,7 @@
 use App\Http\Controllers\BranchesController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\WorkersController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,8 @@ Route::get('/About-Us', function () {
         "bg_color"=> "rgba(31,35,37,100)",
     ]);
 });
+
+Route::get("/Employee/{id}", [WorkersController::class, 'list'])->name('workers');
 
 Route::get("/Furnitures", [ProductsController::class,'furnitures']);
 

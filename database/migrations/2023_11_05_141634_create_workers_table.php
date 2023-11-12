@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('age');
             $table->string('email');
             $table->string('phone');
-            $table->boolean('marital');
+            $table->string('marital');
             $table->timestamps();
         });
     }
