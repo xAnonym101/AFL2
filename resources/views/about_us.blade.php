@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('layout_content')
+@section('layout_content1')
     <table>
         <tr>
             <td>
@@ -17,4 +17,5 @@
                     class="img-fluid rounded-circle" alt="...">
             </td>
     </table>
+
 @endsection
