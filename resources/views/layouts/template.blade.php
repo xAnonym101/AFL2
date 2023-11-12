@@ -62,6 +62,15 @@
     </div>
 
     <footer class="mt-5 text-center text-light">
+        <table class=mx-auto>
+            <tr>
+                <td><a>Quick Links</a></td>
+                <td><a href="/">| home</a></td>
+                <td><a href="/About-Us">| about us</a></td>
+                <td><a href="/contact-Us">| contact us</a></td>
+                <td><a href="/furnitures">| furnitures</a></td>
+            </tr>
+        </table>
         <p>&copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a></p>
     </footer>
 
