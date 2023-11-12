@@ -99,5 +99,17 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function furnitures() {
+        $content = DB::table("products")->get();
+        
+        return view("product", [
+            "pagetitle" => "home",
+            "maintitle" => "Virgo Furnishers",
+            "product"=> "active",
+            "bg_color"=> "rgba(45,37,26,1)",
+            "content" => $content
+        ]);
+    }
+
     
 }

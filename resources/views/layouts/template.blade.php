@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg sticky-top"
         style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
         <div class="container-fluid float-right">
-            <a class="text-white navbar-brand sticky-top" href="#">virgo Furnisher</a>
+            <a class="text-white navbar-brand sticky-top" href="#">| V.F |</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,16 @@
                         <a class="text-black nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item nav-tabs">
-                        <a class="text-black nav-link {{ $about ?? '' }}" href="/about_us">About us</a>
+                        <a class="text-black nav-link {{ $about ?? '' }}" href="/About-Us">About Us</a>
                     </li>
                     <li class="nav-item nav-tabs">
-                        <a class="text-black nav-link {{ $contact ?? '' }}" href="/contact_us">contact us</a>
+                        <a class="text-black nav-link {{ $contact ?? '' }}" href="/Contact-Us">Contact Us</a>
                     </li>
-                    <li class="nav-item nav-tabs">
+                    {{-- <li class="nav-item nav-tabs">
                         <a class="text-black nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item nav-tabs">
-                        <a class="text-black nav-link {{ $product ?? '' }}" href="/product">product</a>
+                        <a class="text-black nav-link {{ $product ?? '' }}" href="/Furnitures">Furnitures</a>
                     </li>
             </div>
 
@@ -71,6 +71,10 @@
     <div class=" overflow-hidden">
         @yield('gbr')
     </div>
+
+    <footer class="mt-5 text-center text-light">
+        <p>&copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a></p>
+    </footer>
 
 </body>
 

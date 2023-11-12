@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BranchesController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\DB;
@@ -16,69 +17,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('home',
+    return view('Home',
     [
-        "pagetitle" => "home",
+        "pagetitle" => "Home",
         "maintitle" => "Virgo Furnishers",
         "home" => "active",
         "bg_color"=> "rgba(45,37,26,1)",
     ]);
 });
 
-Route::get('/about_us', function () {
+Route::get('/About-Us', function () {
     return view('about_us',
     [
-        "pagetitle" => "home",
+        "pagetitle" => "About Us",
         "maintitle" => "Virgo Furnishers",
         "about"=> "active",
         "bg_color"=> "rgba(31,35,37,100)",
     ]);
 });
 
-Route::get('/contact_us', function () {
-    return view('contact_us',
-    [
-        "pagetitle" => "home",
-        "maintitle" => "Virgo Furnishers",
-        "contact"=> "active",
-        "bg_color"=> "rgba(45,37,26,1)",
-    ]);
-});
+Route::get("/Furnitures", [ProductsController::class,'furnitures']);
 
-Route::get('/employee', function () {
-    return view('employee',
-    [
-        "pagetitle" => "home",
-        "maintitle" => "Virgo Furnishers",
-        "employee"=> "active",
-        "bg_color"=> "rgba(45,37,26,1)",
-    ]);
-});
+Route::get("/Furniture-Detailed/{id}", [ProductsController::class, 'showDetail'])->name('products.show');
 
-Route::get('/product', function () {
-
-    $product = DB::table('products')->get();
-
-    return view('product',
-    [
-        "pagetitle" => "home",
-        "maintitle" => "Virgo Furnishers",
-        "product"=> "active",
-        "bg_color"=> "rgba(45,37,26,1)",
-        "content" => $product
-    ]);
-});
-
-Route::get("/productdetail/{id}", [ProductsController::class, 'showDetail'])->name('products.show');
+Route::get('/Contact-Us', [BranchesController::class,'ContactUs']);
 
 
-// Route::get('/home', function () {
-//     return view('home',
-//     [
-//         "pagetitle" => "home",
-//         "maintitle" => "Virgo Furnishers",
-//     ]);
-// });
 
 Route::middleware([
     'auth:sanctum',

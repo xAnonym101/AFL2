@@ -14,6 +14,7 @@ class branches extends Model
         "branch_location",
         "branch_email",
         "branch_pnumber",
+        "branch_ig",
         "workers_count",
     ];
 
