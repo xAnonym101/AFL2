@@ -35,7 +35,7 @@
                         <a class="text-black nav-link {{ $about ?? '' }}" href="/About-Us">About Us</a>
                     </li>
                     <li class="nav-item nav-tabs">
-                        <a class="text-black nav-link {{ $contact ?? '' }}" href="/Contact-Us">Contact Uus</a>
+                        <a class="text-black nav-link {{ $contact ?? '' }}" href="/Contact-Us">Contact Us</a>
                     </li>
                     {{-- <li class="nav-item nav-tabs">
                         <a class="text-black nav-link {{ $employee ?? '' }}" href="/employee">employee</a>

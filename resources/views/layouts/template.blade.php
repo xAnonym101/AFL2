@@ -88,15 +88,15 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="mb-3">
-                                            <label for="Contactusnama" class="form-label">Nama :</label>
+                                            <label for="Contactusnama" class="form-label">Name :</label>
                                             <input type="text" class="form-control" id="Contactusnama" aria-describedby="emailHelp">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="ContactusEmail" class="form-label">Email address :</label>
+                                            <label for="ContactusEmail" class="form-label">Email Address :</label>
                                             <input type="email" class="form-control" id="ContactusEmail" aria-describedby="emailHelp">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="ContactusPerusahaan" class="form-label">Perusahaan :</label>
+                                            <label for="ContactusPerusahaan" class="form-label">Corporate :</label>
                                             <input type="text" class="form-control" id="ContactusPerusahaan"
                                                 aria-describedby="emailHelp">
                                         </div>
@@ -105,7 +105,7 @@
                                             <input type="password" class="form-control" id="ContactusPassword">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="ContactusPesan" class="form-label">pesan :</label>
+                                            <label for="ContactusPesan" class="form-label">Message :</label>
                                             <input type="text" class="form-control form-control-lg" id="ContactusPesan">
                                         </div>
                                         <div class="modal-footer">
