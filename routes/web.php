@@ -62,6 +62,8 @@ Route::get('/product', function () {
     ]);
 });
 
+Route::get("/product/{id}", Controller::class, 'showDetail');
+
 
 // Route::get('/home', function () {
 //     return view('home',
