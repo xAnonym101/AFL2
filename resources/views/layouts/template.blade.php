@@ -61,9 +61,41 @@
         @yield('gbr')
     </div>
 
-    <footer class="mt-5 text-center text-light">
-        <p>&copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a></p>
+    <footer class="bg-dark text-white p-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget quam sed odio iaculis facilisis.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <p>Email: main_branch@example.com</p>
+                    <p>Phone: 333-444-5555</p>
+                    <p>Address: 123 Main St, City</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <p>Stay connected on social media:</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white">Facebook</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white">Twitter</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Your Company. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
+    
 
 </body>
 

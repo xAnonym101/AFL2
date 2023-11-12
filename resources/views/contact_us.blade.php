@@ -17,6 +17,7 @@
                                             style="max-width: 300px; max-height: 250px; width: 100%;">
                                     </div>
                                     <div class="col-md-5 text-left">
+                                        <p>Location: {{ $item->branch_location }}</p>
                                         <p>Email: {{ $item->branch_email }}</p>
                                         <p>Instagram: {{ $item->branch_ig }}</p>
                                         <p>Phone: {{ $item->branch_pnumber }}</p>
@@ -47,6 +48,7 @@
                                         style="max-width: 300px; max-height: 250px; width: 100%;">
                                 </div>
                                 <div class="col-md-5 text-left">
+                                    <p>Location: {{ $item->branch_location }}</p>
                                     <p>Email: {{ $item->branch_email }}</p>
                                     <p>Instagram: {{ $item->branch_ig }}</p>
                                     <p>Phone: {{ $item->branch_pnumber }}</p>
@@ -74,6 +76,7 @@
                                         style="max-width: 300px; max-height: 250px; width: 100%;">
                                 </div>
                                 <div class="col-md-5 text-left">
+                                    <p>Location: {{ $item->branch_location }}</p>
                                     <p>Email: {{ $item->branch_email }}</p>
                                     <p>Instagram: {{ $item->branch_ig }}</p>
                                     <p>Phone: {{ $item->branch_pnumber }}</p>
