@@ -68,7 +68,8 @@ class BranchesController extends Controller
     public function getName($id)
     {
         $branches = DB::table("branches")->where("id", $id)->first();
-        return $branches->branch_location;
+
+        return $branches ? $branches->branch_location : '';
     }
 
     public function ContactUS()
@@ -86,7 +87,7 @@ class BranchesController extends Controller
             'pagetitle' => "",
             "contact" => "active",
             "bg_color" => "rgba(45,37,26,1)",
-            "furniture_count"=> $array
+            "furniture_count" => $array
         ]);
     }
 
