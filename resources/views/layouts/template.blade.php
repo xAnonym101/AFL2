@@ -36,6 +36,9 @@
                         <a class="text-white nav-link {{ $contact ?? '' }}" href="/contact_us">contact us</a>
                     </li>
                     <li class="nav-item">
+                        <a class="text-white nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="text-white nav-link {{ $product ?? '' }}" href="/product">product</a>
                     </li>
             </div>
