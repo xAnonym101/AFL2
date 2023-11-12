@@ -51,17 +51,6 @@
         </div>
     </nav>
 
-    <script>
-        // JavaScript to toggle the navbar visibility using an icon button
-        document.getElementById('navbarToggleIcon').addEventListener('click', function() {
-            var navbar = document.getElementById('navbarNav');
-            if (navbar.classList.contains('show')) {
-                navbar.classList.remove('show');
-            } else {
-                navbar.classList.add('show');
-            }
-        });
-    </script>
 
     <div class="container-fluid">
         @yield('layout_content1')
