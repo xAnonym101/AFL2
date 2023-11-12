@@ -56,16 +56,20 @@ Route::get('/employee', function () {
 });
 
 Route::get('/product', function () {
+
+    $product = DB::table('products')->get();
+
     return view('product',
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
         "product"=> "active",
         "bg_color"=> "rgba(45,37,26,1)",
+        "content" => $product
     ]);
 });
 
-Route::get("/product/{id}", [ProductsController::class, 'showDetail']);
+Route::get("/productdetail/{id}", [ProductsController::class, 'showDetail'])->name('products.show');
 
 
 // Route::get('/home', function () {

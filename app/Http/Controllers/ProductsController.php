@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\BranchesController;
 use App\Models\products;
 use App\Http\Requests\StoreproductsRequest;
 use App\Http\Requests\UpdateproductsRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class ProductsController extends Controller
 {
@@ -64,9 +66,38 @@ class ProductsController extends Controller
     {
         //
     }
+    public function getDetail($pivot, $content)
+    {
+        $branchesController = new BranchesController();
+        $array = [];
 
-    public function showDetail($id) {
-        $product = DB::table("product")->where("id", $id)->first();
-        return view("productdetail", ["product"=> $product]);
+        foreach ($pivot as $item) {
+            if ($item->products_id == $content->id) {
+                $name = $branchesController->getName($item->products_id);
+                $array[] = $name;
+            }
+        }
+        Log::info($array);
+
+        return $array;
     }
+
+    public function showDetail($id)
+    {
+        $product = DB::table("products")->where("id", $id)->first();
+        $pivot = DB::table("branches_products")->get();
+
+        $branchesController = new BranchesController();
+        $array = $this->getDetail($pivot, $product);
+        return view("productdetail", [
+
+            "pagetitle" => "Details",
+            "bg_color" => "rgba(45,37,26,1)",
+            "product" => "active",
+            "content" => $product,
+            "array" => $array
+        ]);
+    }
+
+    
 }
