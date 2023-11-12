@@ -31,24 +31,4 @@ class Controller extends BaseController
         ]
     );
 }
-
-
-    // Route::get('/About-Us', function () {
-    //     return view('about_us',
-    //     [
-    //         "pagetitle" => "About Us",
-    //         "maintitle" => "Virgo Furnishers",
-    //         "about"=> "active",
-    //         "bg_color"=> "rgba(31,35,37,100)",
-    //     ]);
-    // });
-
-
-
-    // Route::get('/', function () {
-    //     return view('Home',
-    //     [
-    //
-    //     ]);
-    // });
 }
