@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\products;
 use App\Http\Requests\StoreproductsRequest;
 use App\Http\Requests\UpdateproductsRequest;
+use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
@@ -62,5 +63,10 @@ class ProductsController extends Controller
     public function destroy(products $products)
     {
         //
+    }
+
+    public function showDetail($id) {
+        $product = DB::table("product")->where("id", $id)->first();
+        return view("productdetail", ["product"=> $product]);
     }
 }

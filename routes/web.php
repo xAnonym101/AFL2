@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -64,7 +65,7 @@ Route::get('/product', function () {
     ]);
 });
 
-Route::get("/product/{id}", Controller::class, 'showDetail');
+Route::get("/product/{id}", [ProductsController::class, 'showDetail']);
 
 
 // Route::get('/home', function () {

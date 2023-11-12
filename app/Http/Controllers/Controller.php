@@ -11,8 +11,5 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function showDetail($id) {
-        $product = DB::table("product")->where("id", $id)->first();
-        return view("productdetail", ["product"=> $product]);
-    }
+    
 }
