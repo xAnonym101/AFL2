@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('layout_content1')
-    <table class="my-5">
+    <table class="my-5 mx-2">
         <tr>
             <td>
                 <h1 class="text-white p-1">Virgo furnishers</h1>

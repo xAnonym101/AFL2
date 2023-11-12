@@ -17,15 +17,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('Home',
-    [
-        "pagetitle" => "Home",
-        "maintitle" => "Virgo Furnishers",
-        "home" => "active",
-        "bg_color"=> "rgba(45,37,26,1)",
-    ]);
-});
+
 
 Route::get('/About-Us', function () {
     return view('about_us',
@@ -36,6 +28,9 @@ Route::get('/About-Us', function () {
         "bg_color"=> "rgba(31,35,37,100)",
     ]);
 });
+Route::get("/", [Controller::class,'home']);
+
+Route::get("/About-Us", [Controller::class,'about']);
 
 Route::get("/Employee/{id}", [WorkersController::class, 'list'])->name('workers');
 

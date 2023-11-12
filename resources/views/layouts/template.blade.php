@@ -73,6 +73,50 @@
                     <p>Email: main_branch@example.com</p>
                     <p>Phone: 333-444-5555</p>
                     <p>Address: 123 Main St, City</p>
+                    <div >
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Contact us
+                        </button>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Contact us</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="Contactusnama" class="form-label">Nama :</label>
+                                            <input type="text" class="form-control" id="Contactusnama" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="ContactusEmail" class="form-label">Email address :</label>
+                                            <input type="email" class="form-control" id="ContactusEmail" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="ContactusPerusahaan" class="form-label">Perusahaan :</label>
+                                            <input type="text" class="form-control" id="ContactusPerusahaan"
+                                                aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="ContactusPassword" class="form-label">Password :</label>
+                                            <input type="password" class="form-control" id="ContactusPassword">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="ContactusPesan" class="form-label">pesan :</label>
+                                            <input type="text" class="form-control form-control-lg" id="ContactusPesan">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
@@ -85,7 +129,7 @@
                 </div>
             </div>
             <hr class="my-4">
-            <div class="row">
+            <div>
                 <table class=mx-auto>
                     <tr>
                         <td><a>Quick Links</a></td>
@@ -95,7 +139,8 @@
                         <td><a href="/furnitures">| furnitures</a></td>
                     </tr>
                 </table>
-                <p>&copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a>
+                <p class=text-center>
+                    &copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a>
                 </p>
             </div>
         </div>
