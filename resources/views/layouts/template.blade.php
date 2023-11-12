@@ -19,7 +19,7 @@
 <body class=""style="background:{{ $bg_color }} ;">
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
         <div class="container-fluid float-right">
-            {{-- <a class="text-white navbar-brand" href="#">virgo Furnisher</a> --}}
+            <a class="text-white navbar-brand sticky-top" href="#">virgo Furnisher</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,6 +43,10 @@
                         <a class="text-black nav-link {{ $product ?? '' }}" href="/product">product</a>
                     </li>
             </div>
+
+            <div>
+                <a class="text-white navbar-brand sticky-top" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
         </div>
     </nav>
 
@@ -56,7 +60,7 @@
                 navbar.classList.add('show');
             }
         });
-        
+
     </script>
     <div class="container-fluid">
         @yield('layout_content1')
