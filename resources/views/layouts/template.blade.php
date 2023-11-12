@@ -54,35 +54,47 @@
     </style>
 </head>
 
-<body class=""style="background:rgba(45,37,26,1) ;">
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #96926b;">
+<body class=""style="background:{{ $bg_color }} ;">
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
         <div class="container-fluid float-right">
-            <a class="text-white navbar-brand" href="#">Navbar</a>
+            {{-- <a class="text-white navbar-brand" href="#">virgo Furnisher</a> --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav" >
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="text-white nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
+                    <li class="nav-item nav-tabs">
+                        <a class="text-black nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link {{ $about ?? '' }}" href="/about_us">About us</a>
+                    <li class="nav-item nav-tabs">
+                        <a class="text-black nav-link {{ $about ?? '' }}" href="/about_us">About us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link {{ $contact ?? '' }}" href="/contact_us">contact us</a>
+                    <li class="nav-item nav-tabs">
+                        <a class="text-black nav-link {{ $contact ?? '' }}" href="/contact_us">contact us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
+                    <li class="nav-item nav-tabs">
+                        <a class="text-black nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link {{ $product ?? '' }}" href="/product">product</a>
+                    <li class="nav-item nav-tabs">
+                        <a class="text-black nav-link {{ $product ?? '' }}" href="/product">product</a>
                     </li>
             </div>
         </div>
     </nav>
 
+    <script>
+        // JavaScript to toggle the navbar visibility using an icon button
+        document.getElementById('navbarToggleIcon').addEventListener('click', function() {
+            var navbar = document.getElementById('navbarNav');
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+            } else {
+                navbar.classList.add('show');
+            }
+        });
+    </script>
     <div class="container-fluid">
         @yield('layout_content1')
         @yield('layout_content2')

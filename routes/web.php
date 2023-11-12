@@ -18,6 +18,7 @@ Route::get('/', function () {
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
         "home" => "active",
+        "bg_color"=> "rgba(45,37,26,1)",
     ]);
 });
 
@@ -26,6 +27,8 @@ Route::get('/about_us', function () {
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
+        "about"=> "active",
+        "bg_color"=> "rgba(31,35,37,100)",
     ]);
 });
 
@@ -34,6 +37,8 @@ Route::get('/contact_us', function () {
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
+        "contact"=> "active",
+        "bg_color"=> "rgba(45,37,26,1)",
     ]);
 });
 
@@ -42,6 +47,8 @@ Route::get('/employee', function () {
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
+        "employee"=> "active",
+        "bg_color"=> "rgba(45,37,26,1)",
     ]);
 });
 
@@ -50,6 +57,8 @@ Route::get('/product', function () {
     [
         "pagetitle" => "home",
         "maintitle" => "Virgo Furnishers",
+        "product"=> "active",
+        "bg_color"=> "rgba(45,37,26,1)",
     ]);
 });
 
