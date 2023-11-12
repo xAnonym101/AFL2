@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\branches;
 use App\Http\Requests\StorebranchesRequest;
 use App\Http\Requests\UpdatebranchesRequest;
+use Illuminate\Support\Facades\DB;
 
 class BranchesController extends Controller
 {
@@ -62,5 +63,10 @@ class BranchesController extends Controller
     public function destroy(branches $branches)
     {
         //
+    }
+
+    public function getName($id) {
+        $branches = DB::table("branches")->where("id", $id)->first();
+        return $branches->branch_location;
     }
 }

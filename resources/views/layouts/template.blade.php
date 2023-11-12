@@ -16,8 +16,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
-<body class=""style="background:{{ $bg_color }} ;">
-    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
+<body class="overflow-hidden"style="background:{{ $bg_color }} ;">
+    <nav class="navbar navbar-expand-lg sticky-top"
+        style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
         <div class="container-fluid float-right">
             <a class="text-white navbar-brand sticky-top" href="#">virgo Furnisher</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,7 +26,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav" >
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item nav-tabs">
                         <a class="text-black nav-link {{ $home ?? '' }}" aria-current="page" href="/">Home</a>
@@ -60,11 +61,14 @@
                 navbar.classList.add('show');
             }
         });
-
     </script>
+
     <div class="container-fluid">
         @yield('layout_content1')
         @yield('layout_content2')
+    </div>
+
+    <div class=" overflow-hidden">
         @yield('gbr')
     </div>
 
