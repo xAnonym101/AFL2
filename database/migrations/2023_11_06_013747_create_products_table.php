@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('products_picture')->nullable();
             $table->string('furniture_name');
             $table->string('price');
-            $table->string('stocks');
+            $table->integer('stocks');
             $table->timestamps();
         });
     }

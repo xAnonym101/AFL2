@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('branch_location');
             $table->string('branch_email');
             $table->string('branch_pnumber');
+            $table->string('branch_ig');
             $table->unsignedInteger('workers_count');
             $table->timestamps();
         });
