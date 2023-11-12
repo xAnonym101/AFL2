@@ -77,7 +77,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #eeeeee77;
+    background-color: #eeeeeec9;
 }
 
 @media (max-width:767px) {

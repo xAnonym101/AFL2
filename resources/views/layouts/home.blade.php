@@ -16,7 +16,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
-<body class=""style="background:{{ $bg_color }} ;">
+<body class="overflow-hidden"style="background:{{ $bg_color }} ;">
     <nav class="navbar navbar-expand-lg sticky-top"
         style="background-color: #96926b;box-shadow: 0 0 1px 1px rgb(55, 55, 55) inset;">
         <div class="container-fluid float-right">
