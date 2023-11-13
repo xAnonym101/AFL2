@@ -20,7 +20,7 @@
                                 <p class="lead">Sold At:</p>
                                 <ul class="list-unstyled">
                                     @if (is_array($result))
-                                    @foreach ($result as $middle)
+                                        @foreach ($result as $middle)
                                             @foreach ($middle as $name)
                                                 <li>{{ $name[0] }}</li>
                                             @endforeach

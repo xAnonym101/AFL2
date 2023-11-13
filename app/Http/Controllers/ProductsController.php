@@ -88,7 +88,6 @@ class ProductsController extends Controller
         $product = DB::table("products")->where("id", $id)->first();
         $pivot = DB::table("branches_products")->get();
 
-        $branchesController = new BranchesController();
         $array = $this->getDetail($pivot, $id);
         return view("productdetail", [
 
@@ -102,7 +101,7 @@ class ProductsController extends Controller
 
     public function furnitures() {
         $content = DB::table("products")->get();
-        
+
         return view("product", [
             "pagetitle" => "home",
             "maintitle" => "Virgo Furnishers",
@@ -112,5 +111,5 @@ class ProductsController extends Controller
         ]);
     }
 
-    
+
 }
