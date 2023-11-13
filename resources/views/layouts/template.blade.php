@@ -66,13 +66,13 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5>About Us</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget quam sed odio iaculis facilisis.</p>
+                    <p>At Virgo Furnishers, we are proud to boast a diverse team of experts, each with a wealth of experience in the intricate art of furniture craftsmanship. Our commitment to quality and customer satisfaction is reflected in the knowledge and dedication our experts bring to every project. </p>
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Information</h5>
                     <p>Email: main_branch@example.com</p>
                     <p>Phone: 333-444-5555</p>
-                    <p>Address: 123 Main St, City</p>
+                    <p>Address: Main Street, City A</p>
                     <div >
                         <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Contact us
@@ -105,7 +105,7 @@
                                             <input type="password" class="form-control" id="ContactusPassword">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="ContactusPesan" class="form-label">Message :</label>
+                                            <label for="ContactusPesan" class="form-label">Message   :</label>
                                             <input type="text" class="form-control form-control-lg" id="ContactusPesan">
                                         </div>
                                         <div class="modal-footer">

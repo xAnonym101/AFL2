@@ -66,20 +66,21 @@ class ProductsController extends Controller
     {
         //
     }
-    public function getDetail($pivot, $content)
+    public function getDetail($pivot, $id)
     {
         $branchesController = new BranchesController();
-        $array = [];
+        $locations = DB::table("branches_products")->where("products_id", $id)->get("branches_id");
+        // print_r($locations);
+        $result[] = $branchesController->getLocations($locations);
 
-        foreach ($pivot as $item) {
-            if ($item->products_id == $content->id) {
-                $name = $branchesController->getName($item->products_id);
-                $array[] = $name;
-            }
-        }
-        Log::info($array);
+        // foreach ($pivot as $item) {
+        //     if ($item->products_id == $id) {
+        //         $name = $branchesController->getName($item->products_id);
+        //         $locations[] = $name;
+        //     }
+        // }
 
-        return $array;
+        return $result;
     }
 
     public function showDetail($id)
@@ -88,14 +89,14 @@ class ProductsController extends Controller
         $pivot = DB::table("branches_products")->get();
 
         $branchesController = new BranchesController();
-        $array = $this->getDetail($pivot, $product);
+        $array = $this->getDetail($pivot, $id);
         return view("productdetail", [
 
             "pagetitle" => "Details",
             "bg_color" => "rgba(45,37,26,1)",
             "product" => "active",
             "content" => $product,
-            "array" => $array
+            "result" => $array
         ]);
     }
 

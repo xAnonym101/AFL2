@@ -65,11 +65,24 @@ class BranchesController extends Controller
         //
     }
 
-    public function getName($id)
+    public function getLocations($content)
     {
-        $branches = DB::table("branches")->where("id", $id)->first();
+        $branches = [];
+        $index = 0;
+        foreach ($content as $item) {
+            print("HERE");
+           print_r( $item);
+            $location = '';
+                // $result = DB::table("branches")->where("id", $item[$index]->branches_id)->get('branch_location');
+                $result = DB::table("branches")->where("id", $item->branches_id)->pluck('branch_location');
+            if ($result) {
+                $location = $result;
+            }
+            $branches[] = $location;
+            $index++;
+        }
 
-        return $branches ? $branches->branch_location : '';
+        return $branches;
     }
 
     public function ContactUS()

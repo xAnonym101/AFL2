@@ -28,12 +28,13 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductsSeeder::class);
 
         $branchesCount = DB::table("branches")->count();
-        $productsCount = DB::table("products")->count();
+        $products = DB::table("products")->get();
 
-        for ($i = 0; $i < 20; $i++) {
+        foreach ($products as $item) {
+            for ($i = 0; $i < 10; $i++)
             DB::table("branches_products")->insert([
                 "branches_id"=> rand(1, $branchesCount),
-                "products_id"=> rand(1, $productsCount),
+                "products_id"=> $item->id,
             ]);
         }
     }
