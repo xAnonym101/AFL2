@@ -70,8 +70,6 @@ class BranchesController extends Controller
         $branches = [];
         $index = 0;
         foreach ($content as $item) {
-            print("HERE");
-           print_r( $item);
             $location = '';
                 // $result = DB::table("branches")->where("id", $item[$index]->branches_id)->get('branch_location');
                 $result = DB::table("branches")->where("id", $item->branches_id)->pluck('branch_location');
