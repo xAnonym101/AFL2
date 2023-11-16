@@ -68,21 +68,30 @@ class BranchesController extends Controller
     public function getLocations($content)
     {
         $branches = [];
-        $index = 0;
         foreach ($content as $item) {
             $location = '';
-                // $result = DB::table("branches")->where("id", $item[$index]->branches_id)->get('branch_location');
-                $result = DB::table("branches")->where("id", $item->branches_id)->pluck('branch_location');
+            $result = DB::table("branches")->where("id", $item->branches_id)->pluck('branch_location');
             if ($result) {
                 $location = $result;
             }
             $branches[] = $location;
-            $index++;
         }
 
         return $branches;
     }
 
+    public function furnitureCount($pivot, $branchID, $products)
+    {
+        $count = 0;
+        foreach ($pivot as $pivot) {
+            if ($pivot->branches_id == $branchID) {
+                $stocks = DB::table("products")->where("id", $pivot->products_id)->pluck('stocks')->first();
+                $count = $count + $stocks;
+            }
+        }
+        return $count;
+    }
+    
     public function ContactUS()
     {
         $branches = DB::table("branches")->get();
@@ -100,17 +109,5 @@ class BranchesController extends Controller
             "bg_color" => "rgba(45,37,26,1)",
             "furniture_count" => $array
         ]);
-    }
-
-    public function furnitureCount($pivot, $branchID, $products)
-    {
-        $count = 0;
-        foreach ($pivot as $pivot) {
-            if ($pivot->branches_id == $branchID) {
-                $stocks = DB::table("products")->where("id", $pivot->products_id)->pluck('stocks')->first();
-                $count = $count + $stocks;
-            }
-        }
-        return $count;
     }
 }

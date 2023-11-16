@@ -25,7 +25,7 @@
                                     <div class="col-md-5 text-right">
                                         <p>Available Furnitures : {{$furniture_count[$item->id-1]}}</p>
                                         <p>Number of Workers: {{ $item->workers_count }}</p>
-                                        <a href="{{ route('workers', ['id'=>$item->id]) }}" class="btn btn-primary bg-dark">Employees</a>
+                                        <a href="/Employee/{{$item->id}}" class="btn btn-primary bg-dark">Employees</a>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="col-md-5 text-right">
                                     <p>Available Furnitures : {{$furniture_count[$item->id-1]}}</p>
                                     <p>Number of Workers: {{ $item->workers_count }}</p>
-                                    <a href="{{ route('workers', ['id'=>$item->id]) }}" class="btn btn-primary bg-dark">Employees</a>
+                                    <a href="/Employee/{{$item->id}}" class="btn btn-primary bg-dark">Employees</a>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 <div class="col-md-5 text-right">
                                     <p>Available Furnitures : {{$furniture_count[$item->id-1]}}</p>
                                     <p>Number of Workers: {{ $item->workers_count }}</p>
-                                    <a href="{{ route('workers', ['id'=>$item->id]) }}" class="btn btn-primary bg-dark">Employees</a>
+                                    <a href="/Employee/{{$item->id}}" class="btn btn-primary bg-dark">Employees</a>
                                 </div>
                             </div>
                         </div>

@@ -30,7 +30,7 @@
     </tbody>
 </table>
 <div class="mt-5 text-center">
-    <a href="{{ url()->previous() }}" class="btn btn-primary bg-dark">Back</a>
+    <a href="/Contact-Us" class="btn btn-primary bg-dark">Back</a>
 </div>
 
 @endsection

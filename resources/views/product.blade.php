@@ -15,7 +15,7 @@
             <div class="row justify-content-center">
                 @foreach($content as $content) 
                 <div class="col-md-3 mt-3 ms-2 me-2">
-                    <a href="{{ route('products.show', ['id' => $content->id]) }}" class="card-link">
+                    <a href="/Furniture-Detailed/{{$content->id}}" class="card-link">
                         <div class="card position-relative">
                             <div style="overflow: hidden; aspect-ratio: 16/10;">
                                 <img src="{{$content->products_picture}}" class="card-img-top mx-auto" alt="..." style="width: 100%; height: 100%; object-fit: cover;">

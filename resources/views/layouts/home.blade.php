@@ -37,9 +37,6 @@
                     <li class="nav-item nav-tabs">
                         <a class="text-black nav-link {{ $contact ?? '' }}" href="/Contact-Us">Contact Us</a>
                     </li>
-                    {{-- <li class="nav-item nav-tabs">
-                        <a class="text-black nav-link {{ $employee ?? '' }}" href="/employee">employee</a>
-                    </li> --}}
                     <li class="nav-item nav-tabs">
                         <a class="text-black nav-link {{ $product ?? '' }}" href="/Furnitures">Furnitures</a>
                     </li>
@@ -51,18 +48,6 @@
         </div>
     </nav>
 
-    <script>
-        // JavaScript to toggle the navbar visibility using an icon button
-        document.getElementById('navbarToggleIcon').addEventListener('click', function() {
-            var navbar = document.getElementById('navbarNav');
-            if (navbar.classList.contains('show')) {
-                navbar.classList.remove('show');
-            } else {
-                navbar.classList.add('show');
-            }
-        });
-    </script>
-
     <div class="container-fluid">
         @yield('layout_content1')
         @yield('layout_content2')
@@ -71,10 +56,6 @@
     <div class=" overflow-hidden">
         @yield('gbr')
     </div>
-
-    <footer class="mt-5 text-center text-light">
-        <p>&copy; 2023 Your Website Name. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/terms" style="color: #888;">Terms of Service</a></p>
-    </footer>
 
 </body>
 

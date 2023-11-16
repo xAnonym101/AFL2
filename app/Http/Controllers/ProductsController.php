@@ -71,15 +71,7 @@ class ProductsController extends Controller
     {
         $branchesController = new BranchesController();
         $locations = DB::table("branches_products")->where("products_id", $id)->get("branches_id");
-        // print_r($locations);
         $result[] = $branchesController->getLocations($locations);
-
-        // foreach ($pivot as $item) {
-        //     if ($item->products_id == $id) {
-        //         $name = $branchesController->getName($item->products_id);
-        //         $locations[] = $name;
-        //     }
-        // }
 
         return $result;
     }
@@ -88,10 +80,9 @@ class ProductsController extends Controller
     {
         $product = DB::table("products")->where("id", $id)->first();
         $pivot = DB::table("branches_products")->get();
-
         $array = $this->getDetail($pivot, $id);
-
         $uniqueLocations = is_array($array) ? array_unique(Arr::flatten($array)) : [];
+        
         return view("productdetail", [
 
             "pagetitle" => "Details",

@@ -22,19 +22,15 @@
                                     @forelse ($result as $name)
                                         <li>{{ $name }}</li>
                                     @empty
-                                        <li>No unique names found</li>
+                                        <li>Out of Stock</li>
                                     @endforelse
                                 </ul>
 
                                 <div class="mt-4 text-left">
-                                    <a href="{{ url()->previous() }}" class="btn btn-primary bg-dark">Back</a>
+                                    <a href="/Furnitures" class="btn btn-primary bg-dark">Back</a>
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="mt-4">
-                        <p class="lead">Product Description:</p>
-                        <p>{{ $content->description }}</p>
-                    </div> --}}
                     </div>
                 </div>
             </div>

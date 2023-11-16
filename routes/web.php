@@ -18,25 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/About-Us', function () {
-    return view('about_us',
-    [
-        "pagetitle" => "About Us",
-        "maintitle" => "Virgo Furnishers",
-        "about"=> "active",
-        "bg_color"=> "rgba(31,35,37,100)",
-    ]);
-});
 Route::get("/", [Controller::class,'home']);
+
+Route::get('/About-Us', [Controller::class,'about_us']);
 
 Route::get("/About-Us", [Controller::class,'about']);
 
-Route::get("/Employee/{id}", [WorkersController::class, 'list'])->name('workers');
+Route::get("/Employee/{id}", [WorkersController::class, 'list']);
 
 Route::get("/Furnitures", [ProductsController::class,'furnitures']);
 
-Route::get("/Furniture-Detailed/{id}", [ProductsController::class, 'showDetail'])->name('products.show');
+Route::get("/Furniture-Detailed/{id}", [ProductsController::class, 'showDetail']);
 
 Route::get('/Contact-Us', [BranchesController::class,'ContactUs']);
 
