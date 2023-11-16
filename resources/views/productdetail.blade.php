@@ -19,17 +19,13 @@
                                 <p class="lead">Discount: 20% Off</p>
                                 <p class="lead">Sold At:</p>
                                 <ul class="list-unstyled">
-                                    @if (is_array($result))
-                                        @foreach ($result as $middle)
-                                            @foreach ($middle as $name)
-                                                <li>{{ $name[0] }}</li>
-                                            @endforeach
-                                        @endforeach
-                                    @else
-                                        <li>{{ $result }}</li>
-                                    @endif
-                                    {{-- {{$result   }} --}}
+                                    @forelse ($result as $name)
+                                        <li>{{ $name }}</li>
+                                    @empty
+                                        <li>No unique names found</li>
+                                    @endforelse
                                 </ul>
+
                                 <div class="mt-4 text-left">
                                     <a href="{{ url()->previous() }}" class="btn btn-primary bg-dark">Back</a>
                                 </div>

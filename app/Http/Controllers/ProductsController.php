@@ -7,6 +7,7 @@ use App\Models\products;
 use App\Http\Requests\StoreproductsRequest;
 use App\Http\Requests\UpdateproductsRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 
 class ProductsController extends Controller
@@ -89,13 +90,15 @@ class ProductsController extends Controller
         $pivot = DB::table("branches_products")->get();
 
         $array = $this->getDetail($pivot, $id);
+
+        $uniqueLocations = is_array($array) ? array_unique(Arr::flatten($array)) : [];
         return view("productdetail", [
 
             "pagetitle" => "Details",
             "bg_color" => "rgba(45,37,26,1)",
             "product" => "active",
             "content" => $product,
-            "result" => $array
+            "result" => $uniqueLocations
         ]);
     }
 
